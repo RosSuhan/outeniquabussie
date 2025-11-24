@@ -1,0 +1,66 @@
+.scheduleBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+    background: var(--darkgreen);
+    color: #ffffff;
+}
+
+.scheduleHeading,
+.scheduleParagraph {
+    width: 90%;
+    text-align: center;
+}
+
+.scheduleHeading {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.scheduleParagraph {
+    font-size: .875rem;
+}
+
+@media (min-width: 420px) {
+    .scheduleHeading {
+        font-size: 1.5rem;
+    }
+    
+    .scheduleParagraph {
+        font-size: .9375rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .scheduleHeading {
+        font-size: 1.75rem;
+    }
+    
+    .scheduleParagraph {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .scheduleHeading {
+        text-align: left;
+        font-size: 2rem;
+    }
+    
+    .scheduleParagraph {
+        text-align: left;
+        font-size: 1.0625rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .scheduleHeading {
+        font-size: 2.25rem;
+    }
+    
+    .scheduleParagraph {
+        font-size: 1.125rem;
+    }
+}

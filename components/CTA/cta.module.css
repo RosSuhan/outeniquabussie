@@ -1,0 +1,76 @@
+.ctaSection {
+    width: 100dvw;
+    background: var(--grey);
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+
+}
+
+.bookNowCTA,
+.groupCTA {
+    width: 80%;
+    padding: 1rem 0;
+    border-radius: 10px;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 5px 5px 10px #000000;
+    text-decoration: none;
+    text-align: center;
+}
+
+.bookNowCTA {
+    background: var(--orange);
+    color: var(--green);
+}
+
+.groupCTA {
+    background: var(--darkgreen);
+    color: var(--orange);
+}
+
+.bookNowCTA:hover {
+    border: solid 2px var(--green);
+}
+
+.groupCTA:hover{
+    border: solid 2px var(--orange);
+}
+
+@media (min-width: 420px) {
+    .bookNowCTA,
+    .groupCTA {
+        font-size: 1.0625rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .bookNowCTA,
+    .groupCTA {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .ctaSection {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    
+    }
+
+    .bookNowCTA,
+    .groupCTA {
+        width: 40%;
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .bookNowCTA,
+    .groupCTA {
+        font-size: 1.375rem;
+    }
+}

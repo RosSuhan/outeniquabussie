@@ -1,0 +1,43 @@
+.tcBlock {
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tcPageTitle {
+    width: 80%;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.tcRow {
+    width: 80%;
+    padding: .5rem 0;
+}
+
+@media (max-width:912px) {
+    .tcPageTitle,
+    .tcRow {
+        width: 90%;
+    }
+}
+
+@media (max-width:450px) {
+    .tcBlock {
+        text-align: center;
+    }
+    
+    .tcInfo {
+        width: 100%;
+        text-align: left;
+    }
+
+    .tcPageTitle {
+        width: 95%;
+    }
+    
+    .tcRow {
+        width: 95%;
+    }
+}

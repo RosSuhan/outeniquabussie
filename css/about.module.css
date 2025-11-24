@@ -1,0 +1,168 @@
+.aboutSection {
+    background: var(--darkgreen);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.contentSectionInfo {
+    width: 90%;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.valuesSection {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0 0 0;
+}
+
+.valuesLeftBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.valuesHeading {
+    width: 90%;
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.valuesList {
+    padding: 0;
+    width: 80%;
+    font-size: .875rem;
+}
+
+.valuesParagraph {
+    width: 90%;
+    font-size: .875rem;
+    text-align: center;
+}
+
+.valueImageBlock {
+    width: 100%;
+    height: 150px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.valueImg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (min-width: 420px) {
+    .contentSectionInfo {
+        font-size: 0.9375rem;
+    }
+    
+    .valuesHeading {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    
+    .valuesList {
+        font-size: .9375rem;
+    }
+    
+    .valuesParagraph {
+        font-size: .9375rem;
+        text-align: center;
+    }
+}
+
+@media (min-width: 600px) {
+    .contentSectionInfo {
+        font-size: 1rem;
+    }
+    
+    .valuesHeading {
+        font-size: 1.75rem;
+    }
+    
+    .valuesList {
+        font-size: 1rem;
+    }
+    
+    .valuesParagraph {
+        font-size: 1rem;
+    }
+    
+    .valueImageBlock {
+        height: 200px;
+    }
+}
+
+@media (min-width: 800px) {
+    .contentSectionInfo {
+        text-align: left;
+        font-size: 1.0625rem;
+    } 
+
+    .valuesSection {
+        padding: 0;
+    }
+
+    .valuesLeftBlock {
+        order: 1;
+        width: 50%;
+    }
+    
+    .valuesHeading {
+        text-align: left;
+        font-size: 2rem;
+    }
+    
+    .valuesList {
+        font-size: 1.0625rem;
+    }
+    
+    .valuesParagraph {
+        order: 3;
+        font-size: 1.0625rem;
+        text-align: left;
+    }
+    
+    .valueImageBlock {
+        width: 50%;
+        order: 2;
+        height: 300px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .aboutSection {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    
+    .contentSectionInfo {
+        width: 45%;
+        font-size: 1.125rem;
+    }
+
+    .valuesHeading {
+        font-size: 2.25rem;
+    }
+    
+    .valuesList {
+        font-size: 1.2rem;
+    }
+    
+    .valuesParagraph {
+        font-size: 1.125rem;
+    }
+}

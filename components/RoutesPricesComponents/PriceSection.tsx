@@ -1,0 +1,203 @@
+'use client'
+import style from '@/css/priceSection.module.css'
+import { routes } from '@/lib/routes'
+import { useState } from 'react'
+
+
+
+export default function PriceSection(){
+    const [ direction, setDirection ] = useState<'CT' | 'George'>('CT')
+    const [ date, setDate ] = useState('');
+    const [ pickup, setPickup ] = useState('');
+    const [ dropoff, setDropoff ] = useState('');
+    const [ message, setMessage ] = useState('');
+    const [ price, setPrice ] = useState<number | null>(null);
+    const [ loading, setLoading ] = useState(false);
+
+
+    function handleDateChange(e: React.ChangeEvent<HTMLInputElement>) {
+        const selectedDate = new Date(e.target.value);
+        const day = selectedDate.getDay();
+
+        if (day !== 1 && day !== 5) {
+            setMessage("Only Monday and Friday are allowed.");
+            setDate('');
+        } else {
+            setMessage('');
+            setDate(e.target.value);
+        }
+    }
+
+    async function checkPrice() {
+        if (!direction || !pickup || !dropoff || !date) {
+            setMessage("Please fill in all fields.")
+        }
+
+        setLoading(true);
+        setPrice(null);
+
+        try {
+            const Params = new URLSearchParams({
+                pickup,
+                dropoff
+            });
+
+            const res = await fetch(`/api/get-price?${Params.toString()}`)
+            const data = await res.json();
+
+            if (data.error) {
+                setMessage("No price found for this route.");
+            } else {
+                setMessage("");
+                setPrice(data.price);
+            }
+        } catch (e) {
+            setMessage("Error retrieving price.");
+        }
+
+        setLoading(false);
+    }
+
+    return(
+        <section
+            className={style.priceSection}
+        >
+            <h2
+                className={style.priceHeading}
+            >
+                What is you trip going to cost?
+            </h2>
+
+            <div
+                className={style.checkPriceBlock}
+            >
+                {/* Direction */}
+                <div
+                    className={style.priceCheckFieldset}
+                >
+                    <label 
+                        htmlFor=""
+                        className={style.priceCheckLabel}
+                    >
+                        Direction
+                    </label>
+                    <select 
+                        value={direction}
+                        onChange={(e) => setDirection(e.target.value as "CT" | "George")}
+                        className={style.priceCheckInput}
+                        required
+                    >
+                        <option value="CT">George → Cape Town</option>
+                        <option value="George">Cape Town → George</option>
+                    </select>
+                </div>
+
+                {/* Date */}
+                <div
+                    className={style.priceCheckFieldset}
+                >
+                    <label 
+                        className={style.priceCheckLabel}
+                    >
+                        Travel Date
+                    </label>
+                    <input 
+                        type="date"
+                        min={new Date().toISOString().split("T")[0]}
+                        value={date}
+                        onChange={handleDateChange}
+                        className={style.priceCheckInput}
+                        required
+                    />
+                </div>
+
+                {/* Pickup */}
+                <div
+                    className={style.priceCheckFieldset}
+                >
+                    <label 
+                        className={style.priceCheckLabel}
+                    >
+                        Pickup Location
+                    </label>
+                    <select 
+                        value={pickup}
+                        onChange={(e) => setPickup(e.target.value)}
+                        className={style.priceCheckInput}
+                        required
+                    >
+                        <option value="">Select Pickup Location</option>
+                        {(direction === 'CT' ? routes : [...routes].reverse()).map((route, i) =>{
+                            const directionData = route.directionTo.find(d => d.destination === direction);
+                            if(!directionData) return null;
+
+                            return (
+                                <option 
+                                    key={i}
+                                    value={route.town}
+                                >
+                                    {route.town} - {route.locationName}
+                                </option>
+                            )
+                        })}
+                    </select>
+                </div>
+
+                {/* Dropoff */}
+                <div
+                    className={style.priceCheckFieldset}
+                >
+                    <label 
+                        className={style.priceCheckLabel}
+                    >
+                        Dropoff Location
+                    </label>
+                    <select 
+                        value={dropoff}
+                        onChange={(e) => setDropoff(e.target.value)}
+                        className={style.priceCheckInput}
+                        required
+                    >
+                        <option value="">Select Dropoff Location</option>
+                        {(direction === 'CT' ? routes : [...routes].reverse()).map((route, i) =>{
+                            const directionData = route.directionTo.find(d => d.destination === direction);
+                            if(!directionData) return null;
+
+                            return (
+                                <option 
+                                    key={i}
+                                    value={route.town}
+                                >
+                                    {route.town} - {route.locationName}
+                                </option>
+                            )
+                        })}
+                    </select>
+                </div>
+            </div>
+
+            <button
+                onClick={checkPrice}
+                className={style.checkButton}
+                disabled={loading}
+            >
+                {loading ? "Checking..." : "Get Price"}
+            </button>
+
+            {/* ✅ Availability message */}
+            {message && 
+                <p
+                    className={style.errorMessage}
+                >{message}</p>
+            }
+
+            {price !== null && (
+                    <div>
+                        <strong
+                            className={style.priceShow}
+                        >Price: R{price}</strong>
+                    </div>
+                )}
+        </section>
+    )
+}

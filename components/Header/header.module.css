@@ -1,0 +1,112 @@
+.header {
+    width: 100dvw;
+    position: relative;
+}
+
+.headerTopRow {
+    width: 100%;
+    background: var(--darkgreen);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding: .2rem 0;
+}
+
+.headerTopLink {
+    display: flex;
+    align-items: center;
+    margin-right: .5rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: .875rem;
+}
+
+.headerTopLinkIcon {
+    padding: 0 .5rem;
+}
+
+.mainheader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: .2rem 0
+}
+
+.headerLogoBlock {
+    width: 120px;
+}
+
+.headerLogo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.nav {
+    display: none;
+}
+
+.mobileNav {
+    position: absolute;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    top: 100px;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.navLink {
+    color: #000000;
+    text-decoration: none;
+}
+
+.mobileButton {
+    background: none;
+    border: none;
+    font-size: 1rem;
+}
+
+
+.bookNowBtn {
+    background: var(--orange);
+    padding: .2rem .5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--darkgreen);
+}
+
+
+@media (min-width: 400px) {
+    .mobileNav {
+        top: 80px;
+    }
+}
+
+@media (min-width: 800px) {
+    .NavBlock {
+        width: 65%;
+    }
+    
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .mobileNav {
+        top: 80px;
+    }
+    
+    .navLink {
+        padding: 0 .8rem;
+    }
+
+    .mobileButton {
+        display: none;
+    }
+}

@@ -1,0 +1,121 @@
+.footer {
+    /* background: var(--darkgreen); */
+    background: #000000;
+    width: 100dvw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+}
+
+.footerNavBlock {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: .5rem;
+    padding: 2rem;
+}
+
+.footerContactBlock {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+    padding-bottom: 3rem;
+    /* background: purple; */
+}
+
+.footerContactLink,
+.footerNavLinks {
+    /* background: green; */
+    width: 90%;
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2%;
+}
+
+.bottomRow {
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.tpLinks {
+    /* text-decoration: none; */
+    padding: 0 1rem;
+    color: #ffffff;
+}
+
+@media (max-width: 1025px) {
+    .footerLogo {
+        width: 300px;
+        object-fit: contain;
+    }
+    
+    .footerContactBlock {
+        width: 30%;
+    }
+}
+
+@media (max-width: 600px) {
+    .footerLogoLink {
+        order: 3;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footerLogo {
+        width: 80%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .footerNavBlock {
+        order: 1;
+        width: 40%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .footerContactBlock {
+        order: 2;
+        width: 40%;
+    }
+
+    .footerNavLinks {
+        width: 40%;
+    }
+    
+    .footerContactLink {
+        width: 90%;
+    }
+    
+    .bottomRow {
+        order: 4;
+        text-wrap: balance;
+    }
+}
+
+@media (max-width: 420px) {
+    .footerLogoLink {
+        margin: 1rem 0;
+    }
+
+    .footerNavBlock {
+        width: 80%;
+        justify-content: space-evenly;
+    }
+    
+    .footerContactBlock {
+        width: 80%;
+    }
+}

@@ -1,0 +1,98 @@
+.topSection {
+    width: 100%;
+    background-image: url(/assets/background-image.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+    color: #ffffff;
+}
+
+.heroMainHeading,
+.heroSecondHeading {
+    text-align: center;
+    width: 90%;
+    margin: 0;
+}
+
+.heroMainHeading {
+    font-size: 1.75rem;
+}
+
+.heroSecondHeading {
+    font-size: 1.25rem;
+    text-wrap: balance;
+}
+
+.heroCaption {
+    margin: 0;
+    width: 90%;
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 420px) {
+    .heroMainHeading {
+        font-size: 2rem;
+    }
+    
+    .heroSecondHeading {
+        font-size: 1.5rem;
+    }
+
+    .heroCaption {
+        font-size: 1.0625rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .heroMainHeading {
+        font-size: 2.5rem;
+    }
+    
+    .heroSecondHeading {
+        font-size: 1.75rem;
+    }
+
+    .heroCaption {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .heroMainHeading,
+    .heroSecondHeading {
+        text-align: left;
+    }
+    
+    .heroMainHeading {
+        font-size: 3rem;
+    }
+    
+    .heroSecondHeading {
+        font-size: 2rem;
+    }
+
+    .heroCaption {
+        text-align: left;
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .heroMainHeading {
+        font-size: 3.5rem;
+    }
+    
+    .heroSecondHeading {
+        font-size: 2.25rem;
+    }
+
+    .heroCaption {
+        font-size: 1.375rem;
+    }
+}

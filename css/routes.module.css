@@ -1,0 +1,155 @@
+.routesTabSection {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    row-gap: 1rem;
+    padding: 1rem 0;
+}
+
+.routeButton,
+.activeRoute {
+    padding: .5rem 0;
+    font-size: 1rem;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.routeButton {
+    background: transparent;
+    color: #000000;
+}
+
+.activeRoute {
+    background: var(--green);
+    color: #ffffff;
+}
+
+.tableBlock {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.routeTable {
+    width: 90%;
+    border: #000000 solid 1px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.routeCaption {
+    width: 100%;
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+.routeTableHead {
+    background-color: #eeeeee;
+}
+
+.routeTableC1 {
+    width: 70%;
+    text-overflow: hidden;
+}
+
+.routeTableRow {
+    border: solid #000000 1px;
+}
+
+tbody tr:nth-child(odd){
+    background: var(--beidge);
+}
+
+.routeTableCell {
+    padding: .5rem 0;
+    font-size: 0.875rem;
+}
+
+.routeAddressLink {
+    font-size: 0.7rem;
+    color: var(--orange);
+}
+
+@media (min-width: 420px) {
+    .routeButton,
+    .activeRoute {
+        font-size: 1.0625rem;
+    }
+
+    .routeCaption {
+        font-size: 0.9rem;
+    }
+    
+    .routeTableCell {
+        font-size: 0.9375rem;
+    }
+    
+    .routeAddressLink {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .routeButton,
+    .activeRoute {
+        font-size: 1.125rem;
+    }
+    
+    .routeCaption {
+        font-size: 0.9375rem;
+    }
+    
+    .routeTableCell {
+        font-size: 1rem;
+    }
+    
+    .routeAddressLink {
+        font-size: 0.9375rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .routesTabSection {
+        row-gap: 2rem;
+        padding: 4rem 0;
+    }
+    
+    .routeButton,
+    .activeRoute {
+        max-width: 320px;
+    }
+    
+    .routeTable {
+        max-width: 750px;
+    }
+    
+    .routeCaption {
+        font-size: 1rem;
+    }
+
+    .routeTableCell {
+        font-size: 1.0625rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .routeButton,
+    .activeRoute {
+        font-size: 1.5rem;
+    }
+    
+    .routeCaption {
+        font-size: 1.125rem;
+    }
+
+    .routeTableCell {
+        font-size: 1.125rem;
+    }
+    
+    .routeAddressLink {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,179 @@
+.fleetSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fleetSectionIntro {
+    width: 90%;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.fleetImageRow {
+    background: var(--darkgreen);
+    color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+}
+
+.fleetImageBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fleetImg {
+    order: 2;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.fleetCarName {
+    order: 1;
+    width: 90%;
+    font-size: 1.125rem;
+    text-align: center;
+}
+
+.fleetCarFact {
+    order: 3;
+    width: 80%;
+    padding: 0;
+    font-size: 0,875rem;
+}
+
+.fleetCarTripBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fleetCarTripHeading {
+    width: 90%;
+    font-size: 1.25rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.fleetCarTripList {
+    width: 80%;
+    padding: 0;
+    font-size: 0.875rem;
+}
+
+@media (min-width: 420px) {
+    .fleetSectionIntro {
+        font-size: 0.9375rem;
+    }
+    
+    .fleetCarName {
+        font-size: 1.25rem;
+    }
+    
+    .fleetCarFact {
+        font-size: 0.9375rem;
+    }
+    
+    .fleetCarTripHeading {
+        font-size: 1.5rem;
+    }
+    
+    .fleetCarTripList {
+        font-size: 0.9375rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .fleetSectionIntro {
+        font-size: 1rem;
+        text-align: left;
+    }
+    
+    .fleetImg {
+        height: 250px;
+    }
+    
+    .fleetCarName {
+        font-size: 1.375rem;
+    }
+    
+    .fleetCarFact {
+        font-size: 1rem;
+    }
+    
+    .fleetCarTripHeading {
+        font-size: 1.75rem;
+    }
+    
+    .fleetCarTripList {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .fleetSectionIntro {
+        font-size: 1.0625rem;
+    }
+    
+    .fleetImageRow {
+        align-items: flex-start;
+    }
+    
+    .fleetImageBlock {
+        width: 45%;
+    }
+
+    .fleetCarName {
+        font-size: 1.5rem;
+    }
+    
+    .fleetCarFact {
+        font-size: 1.0625rem;
+    }
+
+    .fleetCarTripHeading {
+        font-size: 2rem;
+        text-align: left;
+    }
+    
+    .fleetCarTripList {
+        font-size: 1.0625rem;
+        width: 85%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .fleetSectionIntro {
+        font-size: 1.125rem;
+    }
+    
+    .fleetCarName {
+        font-size: 1.75rem;
+    }
+
+    .fleetImg {
+        height: 400px;
+    }
+    
+    .fleetCarFact {
+        font-size: 1.125rem;
+        width: 60%;
+    }
+    
+    .fleetCarTripHeading {
+        font-size: 2.25rem;
+    }
+    
+    .fleetCarTripList {
+        font-size: 1.125rem;
+    }
+}

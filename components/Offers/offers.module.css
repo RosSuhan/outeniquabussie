@@ -1,0 +1,167 @@
+.offeringSection {
+    width: 100dvw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.offeringBlockOne {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.offeringHeading {
+    text-align: center;
+    width: 90%;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.offerList {
+    padding: 0;
+    width: 80%;
+    font-size: 0.875rem;
+}
+
+.offersImgBlock {
+    width: 100%;
+    height: 100px;
+}
+
+.offerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.offerCtaRow {
+    background: var(--darkgreen);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+}
+
+.offerCTAHeading {
+    font-size: 1.25rem;
+    letter-spacing: .07rem;
+    width: 40%;
+    text-wrap: balance;
+    color: #ffffff;
+}
+
+.offerCTA {
+    width: 45%;
+    padding: 1rem 0;
+    background: var(--brown);
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    color: #ffffff;
+    box-shadow: 5px 5px 10px #000000;
+    text-align: center;
+    text-decoration: none;
+}
+
+@media (min-width: 420px) {
+    .offeringHeading {
+        font-size: 1.5rem;
+    }
+    
+    .offerList {
+        font-size: 0.9375rem;
+    }
+
+    .offerCTAHeading {
+        font-size: 1.5rem;
+        width: 50%;
+    }
+    
+    .offerCTA {
+        width: 30%;
+        font-size: 1.0625rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .offeringHeading {
+        font-size: 1.75rem;
+    }
+    
+    .offerList {
+        font-size: 1rem;
+    }
+
+    .offerCTAHeading {
+        width: 50%;
+    }
+    
+    .offerCTA {
+        width: 30%;
+        font-size: 1.0625rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .offeringBlockOne {
+        width: 50%;
+        height: 270px;
+    }
+
+    .offeringHeading {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    .offerList {
+        font-size: 1.0625rem;
+    }
+    
+    .offersImgBlock {
+        width: 50%;
+        height: 300px;
+    }
+    
+    .offerCTAHeading {
+        font-size: 1.75rem;
+    }
+    
+    .offerCTA {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .offeringBlockOne {
+        width: 50%;
+        height: 270px;
+        justify-content: center;
+    }
+    
+    .offeringHeading {
+        font-size: 2.25rem;
+    }
+    
+    .offerList {
+        font-size: 1.125rem;
+    }
+    
+    .offersImgBlock {
+        width: 50%;
+        height: 300px;
+    }
+    
+    .offerCTAHeading {
+        font-size: 2.25rem;
+    }
+    
+    .offerCTA {
+        font-size: 1.375rem;
+    }
+}

@@ -1,0 +1,133 @@
+.priceSection {
+    background: var(--grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem 0 2rem 0;
+}
+
+.priceHeading {
+    font-size: 1.25rem;
+    width: 90%;
+    text-align: center;
+    color: var(--orange);
+}
+
+.checkPriceBlock {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.priceCheckFieldset {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    row-gap: .2rem;
+}
+
+.priceCheckLabel {
+    width: 100%;
+    color: #ffffff;
+}
+
+.priceCheckInput {
+    width: 100%;
+    font-size: 1rem;    
+    line-height: 1.2;
+    padding: .2rem 0 .2rem .5rem;
+}
+
+.checkButton {
+    padding: .5rem 2rem;
+    background: var(--darkgreen);
+    color: var(--orange);
+    border-radius: 5px;
+    font-size: 1.125rem;
+    border: solid 2px var(--orange);
+    margin: 2rem 0;
+}
+
+.priceShow {
+    font-size: 1.5rem;
+    color: var(--orange);
+}
+
+.errorMessage {
+    color: red;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 400px) {
+    .priceHeading {
+        font-size: 1.5rem;
+    }
+    
+    .priceCheckInput {
+        font-size: 1.125rem;    
+    }
+}
+
+@media (min-width: 600px) {
+    .priceHeading {
+        font-size: 1.75rem;
+    }
+    
+    .priceCheckInput {
+        font-size: 1.125rem;    
+    }
+    
+    .priceShow {
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .priceHeading {
+        font-size: 2rem;
+    }
+    
+    .checkPriceBlock {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .priceCheckFieldset {
+        width: 44%;
+    }
+    
+    .priceCheckInput {
+        font-size: 1.125rem;    
+    }
+}
+
+@media (min-width: 800px) {
+    .priceHeading {
+        font-size: 2.25rem;
+    }
+    
+    .checkPriceBlock {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .priceCheckFieldset {
+        width: 22%;
+    }
+    
+    .priceCheckInput {
+        font-size: 1.125rem;    
+    }
+    
+    .priceShow {
+        font-size: 1.75rem;
+    }
+}

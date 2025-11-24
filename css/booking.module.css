@@ -1,0 +1,186 @@
+.formSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+    row-gap: 1rem;
+}
+
+.formInfo {
+    width: 90%;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.contactForm {
+    width: 90%;
+    border: solid 1px #3e3e3e;
+    border-radius: 10px;
+    padding: 2rem 0 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #e6e6e6;
+    row-gap: 1rem;
+}
+
+.bookingPriceAvailability {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bookingPriceAvailabilityText {
+    font-size: 1.5rem;
+}
+
+.contactFormFieldset,
+.contactFormSubmitRow {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contactFormSubmitRow {
+    justify-content: center;
+}
+
+.contactFormLabel,
+.contactUsFormLabel {
+    width: 100%;
+    font-size: 1rem;
+}
+
+.contactFormRequire {
+    color: red;
+
+}
+
+.contactFormInput,
+.contactFormLongInput {
+    width: 100%;
+    margin: .3rem 0;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.contactFormSubmit {
+    width: 80%;
+    padding: .5rem 0;
+    border-radius: 10px;
+    background: var(--darkgreen);
+    color: var(--orange);
+    font-size: 1rem;
+}
+
+@media (min-width: 420px) {
+    .formInfo {
+        font-size: 0.9375rem;
+    }
+
+    .contactFormLabel,
+    .contactUsFormLabel {
+        font-size: 1.0625rem;
+    }
+
+    .contactFormInput,
+    .contactFormLongInput {
+        font-size: 1.0625rem;
+    }
+    
+    .contactFormSubmit {
+        font-size: 1.0625rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .formInfo {
+        font-size: 1rem;
+    }
+    .contactFormFieldset,
+    .contactFormSubmitRow {
+        width: 70%;
+        /* display: flex; */
+        /* align-items: center; */
+        /* flex-wrap: wrap; */
+        /* justify-content: space-between; */
+    }
+
+    .contactFormLabel,
+    .contactUsFormLabel {
+        font-size: 1.125rem;
+    }
+
+    .contactFormInput,
+    .contactFormLongInput {
+        font-size: 1.125rem;
+    }
+    
+    .contactFormSubmit {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .formInfo {
+        font-size: 1.0625rem;
+    }
+    .contactFormFieldset {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .contactFormSubmitRow {
+        width: 50%;
+    }
+
+    .contactUsFormLabel,
+    .contactFormLabel {
+        width: 30%;
+        font-size: 1.25rem;
+    }
+
+    .contactFormInput {
+        width: 65%;
+        font-size: 1.25rem;
+        line-height: 1.3;
+    }
+
+    .contactFormLongInput {
+        font-size: 1.25rem;
+        line-height: 1.3;
+    }
+    
+    .contactFormSubmit {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .formInfo {
+        font-size: 1.125rem;
+    }
+
+    .contactFormFieldset {
+        width: 70%;
+    }
+
+    .contactUsFormLabel,
+    .contactFormLabel {
+        font-size: 1.375rem;
+    }
+
+    .contactFormInput,
+    .contactFormLongInput {
+        font-size: 1.375rem;
+    }
+    
+    .contactFormSubmit {
+        width: 40%;
+    }
+}

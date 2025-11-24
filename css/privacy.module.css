@@ -1,0 +1,32 @@
+.privacyPolicySection {
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+    /* background-color: purple; */
+}
+
+.privacyHeading {
+    width: 80%;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.privacyDate {
+    width: 80%;
+}
+
+.privacyContent {
+    width: 80%;
+    /* background: purple; */
+}
+
+.privacySecondHeading {
+    width: 80%;
+    /* background-color: purple; */
+}
+
+.privacyParagraph {
+    width: 80%;
+}

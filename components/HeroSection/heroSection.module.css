@@ -1,0 +1,204 @@
+.heroSection {
+    width: 100dvw;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/assets/background-image.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.heroHeading {
+    width: 90%;
+    font-size: 1.75rem;
+    margin: 0;
+    text-align: center;
+}
+
+.secondHeading {
+    width: 90%;
+    margin: 0;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.heroCaption {
+    margin: 0;
+    width: 90%;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.heroImage {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+}
+
+.heroCTArow {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    margin-top: 1rem;
+}
+
+.heroBookNowCTA,
+.heroGroupCTA {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: .07rem;
+    padding: .5rem 0;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #000000;
+    text-decoration: none;
+    text-align: center;
+}
+
+.heroBookNowCTA {
+    background: var(--orange);
+    color: var(--darkgreen);
+}
+
+.heroGroupCTA {
+    background: var(--green);
+    color: var(--beige);
+}
+
+@media (min-width: 420px) {
+    .heroHeading {
+        font-size: 2rem;
+    }
+
+    .secondHeading {
+        font-size: 1.5rem;
+    }
+
+    .heroCaption {
+        font-size: 1.0625rem;
+    }
+
+    .heroCTArow {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .heroBookNowCTA,
+    .heroGroupCTA {
+        width: 45%;
+    }
+}
+
+@media (min-width: 600px) {
+    .heroHeading {
+        font-size: 2.5rem;
+    }
+
+    .secondHeading {
+        font-size: 1.75rem;
+    }
+
+    .heroCaption {
+        font-size: 1.125rem;
+    }
+
+    .heroImage {
+        width: 50%;
+    }
+}
+
+@media (min-width: 800px) {
+    .heroSection {
+        height: fit-content;
+        position: relative;
+        align-items: flex-start;
+    }
+
+    .heroHeading {
+        text-align: left;
+        font-size: 3rem;
+        margin-left: 2rem;
+    }
+
+    .secondHeading {
+        width: 50%;
+        margin-left: 2rem;
+        text-align: left;
+        font-size: 2rem;
+    }
+
+    .heroCaption {
+        width: 50%;
+        text-align: left;
+        font-size: 1.25rem;
+        margin-left: 2rem;
+    }
+
+    .heroImage {
+        width: 35%;
+        position: absolute;
+        right: 10px;
+    }
+
+    .heroCTArow {
+        justify-content: flex-start;
+        column-gap: 5%;
+        width: 70%;
+        margin-left: 2rem;
+    }
+    
+    .heroBookNowCTA,
+    .heroGroupCTA {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .heroSection {
+        height: 500px;
+        position: relative;
+        align-items: flex-start;
+    }
+
+    .secondHeading {
+        width: 60%;
+    }
+
+    .heroCaption {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .heroSection {
+        height: 500px;
+    }
+
+    .heroHeading {
+        font-size: 3.5rem;
+    }
+
+    .secondHeading {
+        font-size: 2.25rem;
+    }
+
+    .heroCaption {
+        font-size: 1.375rem;
+    }
+
+    .heroCTArow {
+        margin-top: 2rem;
+    }
+    
+    .heroBookNowCTA,
+    .heroGroupCTA {
+        width: 30%;
+    }
+}
