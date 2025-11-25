@@ -12,6 +12,7 @@ export default function PriceSection(){
     const [ dropoff, setDropoff ] = useState('');
     const [ message, setMessage ] = useState('');
     const [ price, setPrice ] = useState<number | null>(null);
+    const [ availableSeats, setAvailableSeats ] = useState<number | null>(null);
     const [ loading, setLoading ] = useState(false);
 
 
@@ -28,34 +29,74 @@ export default function PriceSection(){
         }
     }
 
-    async function checkPrice() {
+    async function checkAvailabilityAndPrice() {
         if (!direction || !pickup || !dropoff || !date) {
             setMessage("Please fill in all fields.")
+            return;
         }
 
         setLoading(true);
+        setMessage('');
         setPrice(null);
+        setAvailableSeats(null);
 
         try {
-            const Params = new URLSearchParams({
+            const priceParams = new URLSearchParams({
                 pickup,
                 dropoff
             });
+            const priceRes = await fetch(`/api/get-price?${priceParams}`)
+            const priceData = await priceRes.json();
 
-            const res = await fetch(`/api/get-price?${Params.toString()}`)
-            const data = await res.json();
-
-            if (data.error) {
+            if(priceData.error) {
                 setMessage("No price found for this route.");
+                setLoading(false);
+                return;
+            }
+
+            setPrice(priceData.price);
+
+            const availParams = new URLSearchParams({
+                date,
+                direction,
+            });
+
+            const availRes = await fetch(`/api/check-availability?${availParams}`);
+            const availData = await availRes.json();
+
+            if (availData.error) {
+                setMessage(availData.error);
             } else {
-                setMessage("");
-                setPrice(data.price);
+                setAvailableSeats(availData.availableSeats)
             }
         } catch (e) {
-            setMessage("Error retrieving price.");
+            setMessage("Error checking availability.");
         }
 
         setLoading(false);
+    }
+
+    function proceedToBooking() {
+        console.log("Proceed to Booking clicked")
+        const bookingInfo = {
+            direction,
+            date,
+            pickup, 
+            dropoff,
+            price,
+            availableSeats
+        }
+
+        console.log("saving:", bookingInfo)
+
+        try {
+            window.localStorage.setItem("bookingInfo", JSON.stringify(bookingInfo));
+            console.log("LocalStorage saved:", window.localStorage.getItem("bookingInfo"));
+        } catch (e) {
+            console.error("LocalStorage write failed:", e);
+        }
+
+        window.location.href = '/book-ticket/details'
     }
 
     return(
@@ -65,7 +106,7 @@ export default function PriceSection(){
             <h2
                 className={style.priceHeading}
             >
-                What is you trip going to cost?
+                Check if a seat is available:
             </h2>
 
             <div
@@ -177,11 +218,11 @@ export default function PriceSection(){
             </div>
 
             <button
-                onClick={checkPrice}
+                onClick={checkAvailabilityAndPrice}
                 className={style.checkButton}
                 disabled={loading}
             >
-                {loading ? "Checking..." : "Get Price"}
+                {loading ? "Checking..." : "Check Availability"}
             </button>
 
             {/* ✅ Availability message */}
@@ -198,6 +239,23 @@ export default function PriceSection(){
                         >Price: R{price}</strong>
                     </div>
                 )}
+
+            {availableSeats !== null && (
+                <div>
+                    <strong
+                        className={style.priceShow}
+                    >Available Seats: {availableSeats > 0 ? availableSeats : "Fully Booked"}</strong>
+                </div>
+            )}
+
+            {price !== null && availableSeats !== null && availableSeats > 0 && (
+                <button 
+                    className={style.checkButton}
+                    onClick={proceedToBooking}
+                >
+                    Proceed With Booking
+                </button>
+            )}
         </section>
     )
 }

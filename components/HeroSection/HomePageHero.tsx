@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import style from './heroSection.module.css'
 import Link from 'next/link'

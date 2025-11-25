@@ -10,7 +10,23 @@ export async function POST(req: Request) {
             body: JSON.stringify(bookingData)
         });
 
-        const data = await res.json();
+        const text = await res.text();
+        console.log("RAW SCRIPT RESPONCE:", text);
+
+        let data;
+        try {
+            data = JSON.parse(text);
+        } catch (err) {
+            console.error("invalid json from google script:", err);
+            return NextResponse.json(
+                {
+                    error: "invalid json returned from google script", raw: text
+                },
+                { status: 500 }
+            );
+        }
+
+        // const data = await res.json();
         return NextResponse.json(data);
     } catch (err) {
         console.error("Booking Error:", err);

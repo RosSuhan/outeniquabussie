@@ -1,3 +1,4 @@
+'use client'
 import GroupBookingForm from "@/components/Forms/GroupBookingForm";
 import AllPageHero from "@/components/HeroSection/AllPageHero";
 import { BaselineMail } from "@/components/Icons/MailIcon";

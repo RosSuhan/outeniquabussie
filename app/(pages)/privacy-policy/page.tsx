@@ -1,3 +1,4 @@
+'use client'
 import style from '@/css/privacy.module.css'
 import { privacyPolicy } from '@/lib/privacyPolicy'
 

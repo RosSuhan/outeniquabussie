@@ -1,3 +1,4 @@
+'use client'
 import style from './offers.module.css'
 import mapImg from '@/public/assets/map.png'
 import Image from 'next/image'
