@@ -46,7 +46,13 @@ export default function PriceSection(){
                 dropoff
             });
             const priceRes = await fetch(`/api/get-price?${priceParams}`)
+            console.log("STATUS:", priceRes.status)
+            console.log("RAW RESPONSE:", priceRes)
             const priceData = await priceRes.json();
+
+            if(!priceRes.ok) {
+                throw new Error("Failed to fetch price");
+            }
 
             if(priceData.error) {
                 setMessage("No price found for this route.");
@@ -69,11 +75,12 @@ export default function PriceSection(){
             } else {
                 setAvailableSeats(availData.availableSeats)
             }
-        } catch (e) {
+        } catch (err) {
+            console.error("price fetch error:", err)
             setMessage("Error checking availability.");
+        } finally {
+            setLoading(false);
         }
-
-        setLoading(false);
     }
 
     function proceedToBooking() {
