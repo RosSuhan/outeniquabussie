@@ -1,5 +1,6 @@
 import style from './values.module.css'
-import valueImage from './../../../public/quantum.jpg'
+import valueImage from '@/public/assets/toyota-quantum.webp'
+import Image from 'next/image'
 
 export default function Values(){
     return(
@@ -34,16 +35,18 @@ export default function Values(){
             <div
                 className={style.valueImageBlock}
             >
-                <img 
+                <Image 
                     src={valueImage} 
-                    alt="" 
+                    alt=""
+                    width={1600}
+                    height={1200}
                     className={style.valueImg}
                 />
             </div>
             <p
                 className={style.valuesParagraph}
             >
-                We offer child-friendly trips, access for people with disabilities, and even guided tours for group bookings. Whether you're traveling for business, sport, or leisure — we're here to make your journey smooth, safe, and unforgettable.
+                We offer child-friendly trips, access for people with disabilities, and even guided tours for group bookings. Whether you&apos;re traveling for business, sport, or leisure — we&apos;re here to make your journey smooth, safe, and unforgettable.
             </p>
         </section>
     )
