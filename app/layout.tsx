@@ -63,7 +63,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-
       {/* ⭐ Google Tag Manager – HEAD Script */}
       <Script
         id="gtm-head"
@@ -78,6 +77,37 @@ export default function RootLayout({
           `,
         }}
       />
+
+{/* <!-- Event snippet for Page view conversion page --> */}
+      <Script
+        id="ga-page"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{__html: `
+            gtag('event', 'conversion', {'send_to': 'AW-11196953099/TYw3CLeljJwaEIvkj9sp'});
+          `}}
+      />
+
+      {/* <!-- Event snippet for Page view conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. --> */}
+      <Script
+        id="ga-head"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{__html: `
+          function gtag_report_conversion(url) {
+            var callback = function () {
+              if (typeof(url) != 'undefined') {
+                window.location = url;
+              }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-11196953099/TYw3CLeljJwaEIvkj9sp',
+                'event_callback': callback
+            });
+            return false;
+          }`
+        }}
+      />
+
 
       <Script
         id="organization-schema"
