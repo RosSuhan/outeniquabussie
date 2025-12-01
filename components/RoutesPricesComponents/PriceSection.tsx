@@ -1,4 +1,7 @@
 'use client'
+declare global {
+    function gtag_report_conversion(url?: string): void;
+}
 import style from '@/css/priceSection.module.css'
 import { routes } from '@/lib/routes'
 import { useState } from 'react'
@@ -102,8 +105,13 @@ export default function PriceSection(){
         } catch (e) {
             console.error("LocalStorage write failed:", e);
         }
+        if (typeof window !== 'undefined' && typeof gtag_report_conversion === "function") {
+            gtag_report_conversion('/book-ticket/detials');
+        } else {
+            window.location.href = '/book-ticket/details'
+        }
 
-        window.location.href = '/book-ticket/details'
+        
     }
 
     return(
