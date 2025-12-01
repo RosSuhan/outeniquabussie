@@ -1,4 +1,3 @@
-// import BookingForm from "@/components/Forms/brokenBookingForm";
 import AllPageHero from "@/components/HeroSection/AllPageHero";
 import PriceSection from "@/components/RoutesPricesComponents/PriceSection";
 
