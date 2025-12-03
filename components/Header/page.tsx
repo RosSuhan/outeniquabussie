@@ -73,7 +73,7 @@ export default function Header(){
                 <span
                     className={style.headerTopLink}
                 >
-                    Office Hours Mon - Fri 9am - 5pm
+                    Office Hours Mon - Fri 6am - 8pm
                 </span>
                 <a href="tel:+27607268993"
                     className={style.headerTopLink}
