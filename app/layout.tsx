@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "Outeniqua Charter Services",
     images: [
       {
-        url: "https://outeniquacharterservices.co.za/assets/Logo.jpeg",
+        url: "https://outeniquacharterservices.co.za/assets/outeniqua-bussie.webp",
         width: 800,
         height: 800,
         alt: "Outeniqua Charter Services Logo"
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "Garden Route Shuttle Services | Outeniqua Charter Services",
     description:
       "Affordable and reliable shuttle transport across the Garden Route.",
-    images: ["https://outeniquacharterservices.co.za/assets/Logo.jpeg"]
+    images: ["https://outeniquacharterservices.co.za/assets/outeniqua-bussie.webp"]
   },
   alternates: {
     canonical: "https://outeniquacharterservices.co.za"
@@ -120,7 +120,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             name: "Outeniqua Charter Services",
             alternateName: "Outeniqua Bussie",
             url: "https://outeniquacharterservices.co.za",
-            image: "https://outeniquacharterservices.co.za/assets/Logo.jpeg",
+            image: "https://outeniquacharterservices.co.za/assets/outeniqua-bussie.webp",
             description:
               "Reliable and safe shuttle services along the Garden Route. Transfers between Cape Town, George, Mossel Bay, Knysna & Plettenberg Bay.",
             telephone: "+27607268993",
