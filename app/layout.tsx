@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://outeniquacharterservices.co.za/assets/outeniqua-bussie.webp",
-        width: 800,
-        height: 800,
+        width: 150,
+        height: 150,
         alt: "Outeniqua Charter Services Logo"
       }
     ],
