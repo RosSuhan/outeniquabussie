@@ -24,7 +24,7 @@ export default function PriceSection(){
         const selectedDate = new Date(selectedValue);
         const day = selectedDate.getDay();
 
-        const holidayEnd = new Date("2026-01-09");
+        const holidayEnd = new Date("2026-01-15");
         holidayEnd.setHours(23, 59, 59, 999);
 
         const holidayStart = new Date("2025-12-10");
