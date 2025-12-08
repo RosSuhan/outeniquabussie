@@ -27,7 +27,7 @@ export default function PriceSection(){
         const holidayEnd = new Date("2026-01-15");
         holidayEnd.setHours(23, 59, 59, 999);
 
-        const holidayStart = new Date("2025-12-10");
+        const holidayStart = new Date("2025-12-09");
         holidayStart.setHours(23, 59, 59, 999);
 
         if (selectedDate >= holidayStart && selectedDate <= holidayEnd) {
@@ -36,8 +36,8 @@ export default function PriceSection(){
             return
         }
 
-        if (day !== 1 && day !== 5) {
-            setMessage("Only Monday and Friday are allowed.");
+        if (day !== 1 && day !== 3 && day !== 5) {
+            setMessage("Only Monday, Wednesday and Friday are allowed.");
             setDate('');
         } else {
             setMessage('');
