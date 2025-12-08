@@ -1,9 +1,9 @@
 'use client'
 declare global {
     interface Window {
-      dataLayer: unknown[];
+        dataLayer: unknown[];
     }
-  }
+}
 import style from '@/css/priceSection.module.css'
 import { routes } from '@/lib/routes'
 import { useState } from 'react'
@@ -20,15 +20,28 @@ export default function PriceSection(){
 
 
     function handleDateChange(e: React.ChangeEvent<HTMLInputElement>) {
-        const selectedDate = new Date(e.target.value);
+        const selectedValue = e.target.value
+        const selectedDate = new Date(selectedValue);
         const day = selectedDate.getDay();
+
+        const holidayEnd = new Date("2026-01-09");
+        holidayEnd.setHours(23, 59, 59, 999);
+
+        const holidayStart = new Date("2025-12-10");
+        holidayStart.setHours(23, 59, 59, 999);
+
+        if (selectedDate >= holidayStart && selectedDate <= holidayEnd) {
+            setMessage("");
+            setDate(selectedValue);
+            return
+        }
 
         if (day !== 1 && day !== 5) {
             setMessage("Only Monday and Friday are allowed.");
             setDate('');
         } else {
             setMessage('');
-            setDate(e.target.value);
+            setDate(selectedValue);
         }
     }
 
