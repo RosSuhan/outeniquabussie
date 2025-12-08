@@ -12,21 +12,22 @@ export const metadata: Metadata = {
     default: "Garden Route Shuttle Services | Outeniqua Charter Services"
   },
   description:
-    "Reliable, safe and affordable shuttle services across the Garden Route. Daily transfers between Cape Town, George, Mossel Bay, Knysna and Plettenberg Bay.",
+    "Reliable, safe and affordable shuttle services across the Garden Route. Daily transfers between George, Mossel Bay and Cape Town.",
   keywords: [
     "Garden Route shuttle",
     "George shuttle service",
     "Cape Town to George shuttle",
     "George to Plettenberg Bay transport",
     "airport transfers George",
-    "Outeniqua charter services"
+    "Outeniqua charter services",
+    "Shuttel from George to Cape Town"
   ],
   openGraph: {
     type: "website",
     url: "https://outeniquacharterservices.co.za",
     title: "Garden Route Shuttle Services | Outeniqua Charter Services",
     description:
-      "Professional, safe and scenic shuttle services along the Garden Route — Cape Town, Mossel Bay, George, Knysna & Plettenberg Bay.",
+      "Reliable, safe and affordable shuttle services across the Garden Route. Daily transfers between George, Mossel Bay and Cape Town.",
     siteName: "Outeniqua Charter Services",
     images: [
       {
