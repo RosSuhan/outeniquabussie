@@ -36,6 +36,12 @@ export default function PriceSection(){
             return
         }
 
+        if (day === 0) {
+            setMessage("Sundays are not available for trips.");
+            setDate("");
+            return;
+        }
+
         if (day !== 1 && day !== 3 && day !== 5) {
             setMessage("Only Monday, Wednesday and Friday are allowed.");
             setDate('');
