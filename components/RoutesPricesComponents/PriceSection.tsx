@@ -1,7 +1,6 @@
 'use client'
-declare global {
-    function gtag_report_conversion(url?: string): void;
-}
+declare function gtag_report_conversion(url?: string): void;
+
 import style from '@/css/priceSection.module.css'
 import { routes } from '@/lib/routes'
 import { useState } from 'react'
