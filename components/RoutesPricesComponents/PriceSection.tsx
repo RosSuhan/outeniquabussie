@@ -1,11 +1,12 @@
 'use client'
-declare function gtag_report_conversion(url?: string): void;
-
+declare global {
+    interface Window {
+      dataLayer: unknown[];
+    }
+  }
 import style from '@/css/priceSection.module.css'
 import { routes } from '@/lib/routes'
 import { useState } from 'react'
-
-
 
 export default function PriceSection(){
     const [ direction, setDirection ] = useState<'CT' | 'George'>('CT')
@@ -87,29 +88,22 @@ export default function PriceSection(){
 
     function proceedToBooking() {
         console.log("Proceed to Booking clicked")
-        const bookingInfo = {
+        window.localStorage.setItem("bookingInfo", JSON.stringify({
             direction,
             date,
             pickup, 
             dropoff,
             price,
             availableSeats
+        }))
+
+        if(typeof window !== "undefined" && window.dataLayer) {
+            window.dataLayer.push({
+                event: "booking_proceed_clidk"
+            })
         }
 
-        console.log("saving:", bookingInfo)
-
-        try {
-            window.localStorage.setItem("bookingInfo", JSON.stringify(bookingInfo));
-            console.log("LocalStorage saved:", window.localStorage.getItem("bookingInfo"));
-        } catch (e) {
-            console.error("LocalStorage write failed:", e);
-        }
-        if (typeof window !== 'undefined' && typeof gtag_report_conversion === "function") {
-            console.log("Firing Google Ads Conversion event...");
-            gtag_report_conversion('/book-ticket/details');
-        } else {
-            window.location.href = '/book-ticket/details'
-        }
+        window.location.href = '/book-ticket/details'
     }
 
     return(
