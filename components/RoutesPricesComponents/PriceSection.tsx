@@ -105,12 +105,11 @@ export default function PriceSection(){
             console.error("LocalStorage write failed:", e);
         }
         if (typeof window !== 'undefined' && typeof gtag_report_conversion === "function") {
-            gtag_report_conversion('/book-ticket/detials');
+            console.log("Firing Google Ads Conversion event...");
+            gtag_report_conversion('/book-ticket/details');
         } else {
             window.location.href = '/book-ticket/details'
         }
-
-        
     }
 
     return(
