@@ -84,15 +84,13 @@ export default function Header(){
                     060 726 8993
                 </a>
                 <a 
-                    href='mailto:outeniquacharter@gmail.com'
-                    // href="mailto:bookings@outeniquacharterservices.co.za"
+                    href="mailto:bookings@outeniquacharterservices.co.za"
                     className={style.headerTopLink}
                 >
                     <BaselineMail
                         className={style.headerTopLinkIcon}
                     />
-                    {/* bookings@outeniquacharterservices.co.za */}
-                    outeniquacharter@gmail.com
+                    bookings@outeniquacharterservices.co.za
                 </a>
             </div>
             
