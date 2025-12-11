@@ -34,7 +34,8 @@ export default function Contact(){
                 </a>
 
                 <a
-                    href="mailto:bookings@outeniquacharterservices.co.za"
+                    href="mailto:outeniquacharter@gmail.com"
+                    // href="mailto:bookings@outeniquacharterservices.co.za"
                     className={style.contactBlockMail}
                 >
                     <BaselineMail
