@@ -132,11 +132,18 @@ export default function PriceSection(){
             <h2
                 className={style.priceHeading}
             >
+                We are so sorry. We can not accept any bookings.
+            </h2>
+            <h2
+                className={style.priceHeading}
+                style={{display:"none"}}
+            >
                 Check if a seat is available:
             </h2>
 
             <div
                 className={style.checkPriceBlock}
+                style={{display:"none"}}
             >
                 {/* Direction */}
                 <div
