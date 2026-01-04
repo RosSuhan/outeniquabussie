@@ -1,3 +1,4 @@
+import ComingSoon from "@/components/ComingSoon/page";
 import BookNowEnquire from "@/components/CTA/BookNowEnquire";
 import HomepageFleet from "@/components/Fleet/HomepageFleet";
 import HomepageHero from "@/components/HeroSection/HomePageHero";
@@ -10,19 +11,21 @@ import HomepageSchedule from "@/components/Schedule/HomepageSchedule";
 export default function Home() {
   return (
     <main>
-      <HomepageHero/>
+      <ComingSoon/>
 
-      <HomepageSchedule/>
+      {/* <HomepageHero/> */}
 
-      <MainOffering/>
+      {/* <HomepageSchedule/> */}
 
-      <RouteSection/>
+      {/* <MainOffering/> */}
 
-      <PriceSection/>
+      {/* <RouteSection/> */}
 
-      <HomepageFleet/>
+      {/* <PriceSection/> */}
 
-      <BookNowEnquire/>
+      {/* <HomepageFleet/> */}
+
+      {/* <BookNowEnquire/> */}
     </main>
   );
 }

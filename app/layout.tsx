@@ -65,7 +65,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
       {/* ⭐ Google Tag Manager – HEAD Script */}
-      <Script
+      {/* <Script
         id="gtm-head"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
@@ -77,9 +77,9 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-TJQ5JHNW');
           `,
         }}
-      />
+      /> */}
 
-      <Script
+      {/* <Script
         id="organization-schema"
         type="application/ld+json"
         strategy="afterInteractive"
@@ -139,23 +139,23 @@ export default function RootLayout({
             ]
           })
         }}
-      />
+      /> */}
 
       </head>
       <body >
         {/* ⭐ Google Tag Manager – BODY noscript */}
-        <noscript>
+        {/* <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TJQ5JHNW"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
-        </noscript>
+        </noscript> */}
         
-        <Header/>
+        {/* <Header/> */}
         {children}
-        <Footer/>
+        {/* <Footer/> */}
       </body>
     </html>
   );

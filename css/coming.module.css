@@ -36,7 +36,8 @@
 .comingText {
     width: 90%;
     font-size: 2rem; 
-    color: var(--brown);
+    /* color: var(--brown); */
+    color: #ffffff;
     text-align: center;
     text-shadow: var(--green) 1px 1px 2px;
 }
